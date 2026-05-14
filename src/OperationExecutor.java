@@ -4,18 +4,27 @@ public class OperationExecutor {
         switch (operator) {
             case '+':
                 return a + b;
+
             case '-':
                 return a - b;
+
             case '*':
                 return a * b;
+
             case '/': {
                 if (b == 0) {
                     throw new ArithmeticException("Деление на 0");
                 }
                 return a / b;
             }
-            case '%':
-                return  a % b;
+
+            case '%': {
+                if (b == 0) {
+                    throw new ArithmeticException("Деление на 0");
+                }
+                return a % b;
+            }
+
             default:
                 throw new IllegalArgumentException("Неизвестная операция");
         }

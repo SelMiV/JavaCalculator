@@ -77,7 +77,7 @@ public class Main {
         }
     }
 
-    public static boolean isValidNum(String num, NumberSystem base) {
+    public static boolean isValidNumber(String num, NumberSystem base) {
         try {
             converter.toDec(num, base);
             return true;
@@ -95,7 +95,7 @@ public class Main {
 
             choice = scanner.next();
 
-            if (!isValidNum(choice, NumberSystem.DEC)) {
+            if (!isValidNumber(choice, NumberSystem.DEC)) {
                 System.out.println("Введите цифры");
                 continue;
             }
@@ -158,7 +158,7 @@ public class Main {
             System.out.print(text);
             value = scanner.next();
 
-            if (!isValidNum(value, system)) {
+            if (!isValidNumber(value, system)) {
                 System.out.println("Неправильное число");
                 continue;
             }
